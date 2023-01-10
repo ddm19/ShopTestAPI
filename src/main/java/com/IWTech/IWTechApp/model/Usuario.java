@@ -36,5 +36,8 @@ public class Usuario implements Serializable {
     @ManyToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
     List<Pedido> producto = new ArrayList<>();
 
+    @OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
+    List<Pedido> pedido = new ArrayList<>();
+
 
 }

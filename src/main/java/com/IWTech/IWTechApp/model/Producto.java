@@ -49,4 +49,5 @@ public class Producto implements Serializable {
             joinColumns = { @JoinColumn(name = "fk_producto") },
             inverseJoinColumns = {@JoinColumn(name = "fk_usuario")})
     List<Usuario> deseo = new ArrayList<>();
+
 }
