@@ -50,4 +50,10 @@ public class Producto implements Serializable {
             inverseJoinColumns = {@JoinColumn(name = "fk_usuario")})
     List<Usuario> deseo = new ArrayList<>();
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "producto_multimedia",
+            joinColumns = { @JoinColumn(name = "fk_producto") },
+            inverseJoinColumns = {@JoinColumn(name = "fk_multimedia")})
+    List<Multimedia> imagenes = new ArrayList<>();
+
 }
